@@ -5,6 +5,8 @@ local heatsinkable_nodes = {
 	["digistuff:eeprom"] = true,
 }
 
+digistuff.heatsinkable_nodes = heatsinkable_nodes
+
 for i = 0, 15, 1 do
 	local bit0 = i % 2 > 0 and "1" or "0"
 	local bit1 = i % 4 > 1 and "1" or "0"
