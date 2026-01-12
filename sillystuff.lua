@@ -7,7 +7,7 @@ for i = 0, 15, 1 do
 	local bits = bit0 .. bit1 .. bit2 .. bit3
 	do
 		local name = "mesecons_luacontroller:luacontroller" .. bits
-		local groups = core.registered_nodes[name].groups
+		local groups = table.copy(core.registered_nodes[name].groups)
 		groups.heatsinkable = 1
 		core.override_item(name, {
 				groups = groups
@@ -15,7 +15,7 @@ for i = 0, 15, 1 do
 	end
 	do
 		local name = "mooncontroller:mooncontroller" .. bits
-		local groups = core.registered_nodes[name].groups
+		local groups = table.copy(core.registered_nodes[name].groups)
 		groups.heatsinkable = 1
 		core.override_item(name, {
 				groups = groups
